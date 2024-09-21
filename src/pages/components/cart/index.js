@@ -166,7 +166,7 @@ const Cart = () => {
             {cartProducts?.map((product) => (
               <div
                 key={product._id}
-                className="border p-4 rounded shadow-md hover:shadow-lg transition-shadow duration-300"
+                className="border bg-slate-100 p-4 rounded shadow-md hover:shadow-lg transition-shadow duration-300"
               >
                 <img
                   src={product.images?.[0]}
@@ -214,7 +214,7 @@ const Cart = () => {
 
           {/* Checkout Section */}
           <div className="mt-4">
-            <h2 className="text-xl font-semibold">
+            <h2 className="text-xl font-semibold  bg-slate-100 w-44 text-center rounded">
               Total: ${total.toFixed(2)}
             </h2>
 

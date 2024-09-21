@@ -116,7 +116,7 @@ export default function Home() {
               .map((product) => (
                 <div
                   key={product._id}
-                  className="product-item border p-4 mb-2 rounded shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl"
+                  className="product-item bg-slate-100 border p-4 mb-2 rounded shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl"
                 >
                   <img
                     src={product.images?.[0]}
