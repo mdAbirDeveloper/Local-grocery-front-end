@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: Your Domain
+
+# Sitemaps
+Sitemap: Your Domain/sitemap.xml

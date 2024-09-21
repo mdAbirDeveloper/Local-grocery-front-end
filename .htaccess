@@ -1,0 +1,12 @@
+RewriteEngine On
+RewriteBase /your-app-directory/  # Replace with your app directory
+
+
+# Matches any request ending with .js and has one or more nested segments
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/([^/]+)\.(js)$ ./node_modules/next/dist/next-server/server.js [L]
+
+
+# Optional rule to handle additional extensions (modify as needed)
+RewriteRule ^(.*)\.(css|html)$ - [L]

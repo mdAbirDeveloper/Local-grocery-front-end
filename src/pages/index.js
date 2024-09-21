@@ -1,115 +1,165 @@
-import Image from "next/image";
-import localFont from "next/font/local";
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+/* eslint-disable @next/next/no-img-element */
+import Link from "next/link";
+import React, { useState, useEffect } from "react";
+import { FaShoppingCart } from "react-icons/fa"; // Importing cart icon
 
 export default function Home() {
-  return (
-    <div
-      className={`${geistSans.variable} ${geistMono.variable} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
-    >
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/pages/index.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const [products, setProducts] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [customer, setCustomer] = useState(null);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const CustomerData = JSON.parse(localStorage.getItem("customer"));
+      setCustomer(CustomerData);
+    }
+  }, []);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      setLoading(true);
+      try {
+        const response = await fetch(
+          `https://local-grocery-back-end.vercel.app/products?name=${searchTerm}`
+        );
+        const data = await response.json();
+        setProducts(data.products);
+      } catch (error) {
+        console.error("Error fetching products:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProducts();
+  }, [searchTerm]);
+
+  const handleSearchChange = (event) => {
+    setSearchTerm(event.target.value);
+  };
+
+  const handleSearchClick = async () => {
+    setLoading(true);
+    try {
+      const response = await fetch(
+        `https://local-grocery-back-end.vercel.app/products?name=${searchTerm}`
+      );
+      const data = await response.json();
+      setProducts(data.products);
+    } catch (error) {
+      console.error("Error fetching products:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleAddToCart = async (productId) => {
+    if (!customer) {
+      console.log(customer);
+      alert("Please log in to add items to your cart.");
+      return;
+    }
+
+    const cartData = {
+      customer_id: customer._id,
+      product_id: productId,
+    };
+
+    try {
+      const response = await fetch("https://local-grocery-back-end.vercel.app/add-to-cart", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(cartData),
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        alert("Product added to cart successfully!");
+      } else {
+        alert(result.message || "Failed to add product to cart.");
+      }
+    } catch (error) {
+      console.error("Error adding product to cart:", error);
+      alert("An error occurred while adding the product to the cart.");
+    }
+  };
+
+  return (
+    <div>
+      <div className="search-bar my-4">
+        <input
+          type="text"
+          value={searchTerm}
+          onChange={handleSearchChange}
+          placeholder="Search products by name"
+          className="p-2 border rounded"
+        />
+        <button
+          onClick={handleSearchClick}
+          className="ml-2 p-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors duration-300"
+        >
+          Search
+        </button>
+      </div>
+
+      {loading ? (
+        <div className="flex justify-center items-center h-64">
+          <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-blue-500 border-opacity-50"></div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      ) : (
+        <div className="product-list grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {products.length > 0 ? (
+            products
+              ?.slice()
+              .reverse()
+              .map((product) => (
+                <div
+                  key={product._id}
+                  className="product-item border p-4 mb-2 rounded shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl"
+                >
+                  <img
+                    src={product.images?.[0]}
+                    alt={product.name}
+                    className="w-full h-48 object-cover rounded-md mb-4"
+                  />
+                  <div>
+                    <Link href={`/components/productDetails/${product._id}`}>
+                      <h2 className="text-lg font-semibold">{product.name}</h2>
+                      <p className="text-sm text-gray-600">
+                        {product.title}
+                      </p>
+                    </Link>
+                  </div>
+                  <div className="flex justify-between mt-2">
+                    <div className="mt-2">
+                      {product.offerPrice ? (
+                        <p className="font-medium">Price: ${product.price}</p>
+                      ) : (
+                        <p className="font-medium mt-4">
+                          Price: ${product.price}
+                        </p>
+                      )}
+                      {product.offerPrice && (
+                        <p className="text-red-500 font-medium">
+                          Offer Price: ${product.offerPrice}
+                        </p>
+                      )}
+                    </div>
+                    <button
+                      onClick={() => handleAddToCart(product._id)}
+                      className="mt-4 flex items-center justify-center bg-green-500 text-white p-2 rounded hover:bg-green-600 transition-colors duration-300"
+                    >
+                      <FaShoppingCart className="mr-2" /> Add to Cart
+                    </button>
+                  </div>
+                </div>
+              ))
+          ) : (
+            <p>No products found.</p>
+          )}
+        </div>
+      )}
     </div>
   );
 }
