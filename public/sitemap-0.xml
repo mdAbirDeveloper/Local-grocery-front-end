@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>Your Domain/</loc><lastmod>2024-10-03T01:34:59.054Z</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-<url><loc>Your Domain/Layout/</loc><lastmod>2024-10-03T01:34:59.055Z</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-<url><loc>Your Domain/components/Dashboard/</loc><lastmod>2024-10-03T01:34:59.055Z</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-<url><loc>Your Domain/components/Dashboard/DComponents/AddProduct/</loc><lastmod>2024-10-03T01:34:59.055Z</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-<url><loc>Your Domain/components/Dashboard/DComponents/AddUser/</loc><lastmod>2024-10-03T01:34:59.055Z</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-<url><loc>Your Domain/components/Dashboard/DComponents/AllOrders/</loc><lastmod>2024-10-03T01:34:59.055Z</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-<url><loc>Your Domain/components/Dashboard/DComponents/AllProduct/</loc><lastmod>2024-10-03T01:34:59.055Z</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-<url><loc>Your Domain/components/Dashboard/DComponents/AllUsers/</loc><lastmod>2024-10-03T01:34:59.055Z</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-<url><loc>Your Domain/components/Dashboard/Layout/</loc><lastmod>2024-10-03T01:34:59.055Z</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-<url><loc>Your Domain/components/Login/login/</loc><lastmod>2024-10-03T01:34:59.055Z</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-<url><loc>Your Domain/components/Login/signUp/</loc><lastmod>2024-10-03T01:34:59.055Z</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-<url><loc>Your Domain/components/UserLogin/login/</loc><lastmod>2024-10-03T01:34:59.055Z</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-<url><loc>Your Domain/components/UserLogin/signUp/</loc><lastmod>2024-10-03T01:34:59.055Z</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-<url><loc>Your Domain/components/cart/</loc><lastmod>2024-10-03T01:34:59.055Z</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-<url><loc>Your Domain/components/offer/</loc><lastmod>2024-10-03T01:34:59.055Z</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-<url><loc>Your Domain/components/order/</loc><lastmod>2024-10-03T01:34:59.055Z</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-<url><loc>Your Domain/components/shaired/Footer/</loc><lastmod>2024-10-03T01:34:59.055Z</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-<url><loc>Your Domain/components/shaired/Navber/</loc><lastmod>2024-10-03T01:34:59.055Z</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://villagegrocery.codeshinetechnology.com/</loc><lastmod>2024-10-03T01:47:58.761Z</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://villagegrocery.codeshinetechnology.com/Layout/</loc><lastmod>2024-10-03T01:47:58.761Z</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://villagegrocery.codeshinetechnology.com/components/Dashboard/</loc><lastmod>2024-10-03T01:47:58.761Z</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://villagegrocery.codeshinetechnology.com/components/Dashboard/DComponents/AddProduct/</loc><lastmod>2024-10-03T01:47:58.761Z</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://villagegrocery.codeshinetechnology.com/components/Dashboard/DComponents/AddUser/</loc><lastmod>2024-10-03T01:47:58.761Z</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://villagegrocery.codeshinetechnology.com/components/Dashboard/DComponents/AllOrders/</loc><lastmod>2024-10-03T01:47:58.761Z</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://villagegrocery.codeshinetechnology.com/components/Dashboard/DComponents/AllProduct/</loc><lastmod>2024-10-03T01:47:58.761Z</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://villagegrocery.codeshinetechnology.com/components/Dashboard/DComponents/AllUsers/</loc><lastmod>2024-10-03T01:47:58.761Z</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://villagegrocery.codeshinetechnology.com/components/Dashboard/Layout/</loc><lastmod>2024-10-03T01:47:58.761Z</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://villagegrocery.codeshinetechnology.com/components/Login/login/</loc><lastmod>2024-10-03T01:47:58.761Z</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://villagegrocery.codeshinetechnology.com/components/Login/signUp/</loc><lastmod>2024-10-03T01:47:58.761Z</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://villagegrocery.codeshinetechnology.com/components/UserLogin/login/</loc><lastmod>2024-10-03T01:47:58.761Z</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://villagegrocery.codeshinetechnology.com/components/UserLogin/signUp/</loc><lastmod>2024-10-03T01:47:58.761Z</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://villagegrocery.codeshinetechnology.com/components/cart/</loc><lastmod>2024-10-03T01:47:58.761Z</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://villagegrocery.codeshinetechnology.com/components/offer/</loc><lastmod>2024-10-03T01:47:58.762Z</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://villagegrocery.codeshinetechnology.com/components/order/</loc><lastmod>2024-10-03T01:47:58.762Z</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://villagegrocery.codeshinetechnology.com/components/shaired/Footer/</loc><lastmod>2024-10-03T01:47:58.762Z</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://villagegrocery.codeshinetechnology.com/components/shaired/Navber/</loc><lastmod>2024-10-03T01:47:58.762Z</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>

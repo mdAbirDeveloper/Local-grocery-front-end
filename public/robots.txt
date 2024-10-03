@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: Your Domain
+Host: https://villagegrocery.codeshinetechnology.com
 
 # Sitemaps
-Sitemap: Your Domain/sitemap.xml
+Sitemap: https://villagegrocery.codeshinetechnology.com/sitemap.xml
