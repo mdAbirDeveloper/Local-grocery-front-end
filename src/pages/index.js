@@ -140,7 +140,7 @@ export default function Home() {
                         </p>
                       )}
                       {product.offerPrice && (
-                        <p className="text-red-500 font-medium">
+                        <p className="text-green-500 font-medium">
                           Offer Price: ${product.offerPrice}
                         </p>
                       )}
