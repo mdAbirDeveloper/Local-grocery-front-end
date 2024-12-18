@@ -65,7 +65,7 @@ const SignUp = () => {
           <div className="mb-4">
             <label
               htmlFor="name"
-              className="block text-sm font-medium text-white"
+              className="block text-sm font-medium text-green-500"
             >
               Name
             </label>
@@ -81,7 +81,7 @@ const SignUp = () => {
           <div className="mb-4">
             <label
               htmlFor="phone"
-              className="block text-sm font-medium text-white"
+              className="block text-sm font-medium text-green-500"
             >
               Phone Number
             </label>
@@ -99,7 +99,7 @@ const SignUp = () => {
           <div className="mb-4 relative">
             <label
               htmlFor="password"
-              className="block text-sm font-medium text-white"
+              className="block text-sm font-medium text-green-500"
             >
               Password
             </label>

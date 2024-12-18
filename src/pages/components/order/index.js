@@ -58,21 +58,21 @@ const Order = () => {
 
   return (
     <div className="container mx-auto p-4 min-h-screen bg-gray-100">
-      <h1 className="text-3xl font-bold mb-6 text-center text-indigo-600">Your Orders</h1>
+      <h1 className="text-3xl font-bold mb-6 text-center text-green-600">Your Orders</h1>
 
       {loading ? (
         <div className="flex justify-center items-center h-64">
-          <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-blue-500 border-opacity-50"></div>
+          <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-green-500 border-opacity-50"></div>
         </div>
       ) : orders.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {orders.map((order) => (
             <div
               key={order._id}
-              className="bg-white border-t-4 border-indigo-500 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300"
+              className="bg-white border-t-4 border-green-500 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300"
             >
               <div className="p-6">
-                <h2 className="text-lg font-semibold text-indigo-700">
+                <h2 className="text-lg font-semibold text-green-700">
                   Order ID: {order._id}
                 </h2>
                 <p className="text-gray-600 mt-2">

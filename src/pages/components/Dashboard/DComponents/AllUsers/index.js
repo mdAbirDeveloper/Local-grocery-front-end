@@ -285,7 +285,7 @@ const AllUser = () => {
                       onClick={() => openModal(user)}
                       className="bg-green-500 text-white px-2 py-3 rounded hover:bg-green-600 mr-2"
                     >
-                      Add Money
+                      Add Due
                     </button>
                     <button
                       onClick={() => openPayMoneyModal(user)}

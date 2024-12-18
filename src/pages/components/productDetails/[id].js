@@ -54,7 +54,6 @@ const ProductDetails = () => {
 
   const handleAddToCart = async (productId) => {
     if (!customer) {
-      console.log(customer);
       alert("Please log in to add items to your cart.");
       return;
     }

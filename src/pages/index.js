@@ -56,7 +56,6 @@ export default function Home() {
 
   const handleAddToCart = async (productId) => {
     if (!customer) {
-      console.log(customer);
       alert("Please log in to add items to your cart.");
       return;
     }
@@ -97,7 +96,7 @@ export default function Home() {
         />
         <button
           onClick={handleSearchClick}
-          className="ml-2 p-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors duration-300"
+          className="ml-2 p-2 bg-green-500 text-white rounded hover:bg-green-600 transition-colors duration-300"
         >
           Search
         </button>

@@ -157,6 +157,8 @@ const AddProduct = () => {
           <label className="block text-sm font-medium">Price</label>
           <input
             {...register("price", { required: true })}
+            type="number"
+            min={1}
             className="mt-1 py-3 px-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50"
             placeholder="Enter price"
           />
@@ -169,6 +171,8 @@ const AddProduct = () => {
         <div>
           <label className="block text-sm font-medium">Offer Price</label>
           <input
+          type="number"
+          min={0}
             {...register("offerPrice")}
             className="mt-1 py-3 px-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50"
             placeholder="Enter offer price if available"

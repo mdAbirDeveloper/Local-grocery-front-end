@@ -47,7 +47,7 @@ const AllOrder = () => {
 
   return (
     <div className="container mx-auto p-4 min-h-screen bg-gray-100">
-      <h1 className="text-3xl font-bold mb-6 text-center text-indigo-600">All Orders</h1>
+      <h1 className="text-3xl font-bold mb-6 text-center text-green-600">All Orders</h1>
 
       {loading ? (
         <div className="flex justify-center items-center h-64">
@@ -58,12 +58,18 @@ const AllOrder = () => {
           {orders.map((order) => (
             <div
               key={order._id}
-              className="bg-white border-t-4 border-indigo-500 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300"
+              className="bg-white border-t-4 border-green-500 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300"
             >
               <div className="p-6">
-                <h2 className="text-lg font-semibold text-indigo-700">Order ID: {order._id}</h2>
+                <h2 className="text-lg font-semibold text-green-700">Order ID: {order._id}</h2>
                 <p className="text-gray-600 mt-2">
                   Order Date: {new Date(order.date).toLocaleDateString()}
+                </p>
+                <p className="text-green-600 mt-1">
+                  Name: <span className="font-bold">{order.name}</span>
+                </p>
+                <p className="text-green-600 mt-1">
+                  Phone: <span className="font-bold">{order.phone}</span>
                 </p>
                 <p className="text-gray-600 mt-1">
                   Status: <span className="font-bold">{order.status}</span>
@@ -72,8 +78,8 @@ const AllOrder = () => {
                   Total: ${order.total.toFixed(2)}
                 </p>
               </div>
-              <div className="bg-indigo-50 p-4">
-                <h3 className="text-md font-semibold text-indigo-600">Products:</h3>
+              <div className="bg-green-50 p-4">
+                <h3 className="text-md font-semibold text-green-600">Products:</h3>
                 {order.products.map((product) => (
                   <div key={product.product_id} className="flex justify-between items-center py-2 border-b">
                     <div>

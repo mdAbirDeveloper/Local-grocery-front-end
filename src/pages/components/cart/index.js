@@ -61,6 +61,9 @@ const Cart = () => {
     setTotal(totalAmount);
   };
 
+  
+
+
   // Handle deleting a product from the cart
   const handleDeleteFromCart = async (productId) => {
     try {
@@ -133,6 +136,7 @@ const Cart = () => {
           total,
           address: orderDetails.address,
           phone: orderDetails.phone,
+          name: customer.name,
           paymentMethod: "COD", // Cash on Delivery
         }),
       });

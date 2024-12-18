@@ -17,7 +17,6 @@ const Offer = () => {
 
   const handleAddToCart = async (productId) => {
     if (!customer) {
-      console.log(customer);
       alert("Please log in to add items to your cart.");
       return;
     }
@@ -96,7 +95,7 @@ const Offer = () => {
                     <p className="font-medium line-through">
                       Price: ${product.price}
                     </p>
-                    <p className="text-red-500 font-medium">
+                    <p className="text-green-500 font-medium">
                       Offer Price: ${product.offerPrice}
                     </p>
                   </div>
